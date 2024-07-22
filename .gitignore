@@ -1,0 +1,8 @@
+
+.vscode
+
+LuaSTG*
+
+mod/*
+!mod/README.md
+!mod/hello-world/
