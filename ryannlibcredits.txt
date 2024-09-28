@@ -1,7 +1,7 @@
-Ryannlib, version 1.02
+Ryannlib, version 1.03
 
 Terms of use: Non-commercial/personal use
-Ryannlib for LuaSTGSub/aex+ (tested on v0.8.21-beta)
+Ryannlib for LuaSTG Evo
 
 To "install" it, simply merge this Library folder with the one inside /game in LuaSTGExPlus.
 If it asks to replace files, replace them all.
@@ -40,6 +40,8 @@ Twitter - @RyannThi
 Discord - Hiro#2243
 
 --- Changelog
+
+1.03: Changed amulet sprite
 
 1.02: Changed player score music (thanks Roka Enzaki) and fixed glitchy eff_magicsquare omiga
 
