@@ -386,7 +386,7 @@ end
 
 --! @brief 构造录像文件名称
 function ReplayManager:MakeReplayFilename(slot)
-    return self._repdir .. "/" .. string.format(self._filefmt2, slot)
+    return self._repdir .. "\\" .. string.format(self._filefmt2, slot)
 end
 
 --! @brief 刷新
@@ -400,7 +400,7 @@ function ReplayManager:Refresh()
             local _, _, id = string.find(name, self._filefmt)
             if id then
                 id = tonumber(id)
-                assert(self._slots[id] == nil)
+                assert(self._slots[id] == nil, "duplicate slot id: " .. id)
                 if not (id <= 0 or id > self._slotmax) then
                     plus.TryCatch {
                         try = function()
