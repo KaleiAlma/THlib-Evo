@@ -33,7 +33,7 @@ function Collision_Checker.init()
     KeyDown123 = false
 end
 function Collision_Checker.render()
-    if GetKeyState(192) then
+    if GetKeyState(KEY.Tilde) then
         if not KeyDown192 then
             KeyDown192 = true
             if toggle == true then
@@ -45,7 +45,7 @@ function Collision_Checker.render()
     else
         KeyDown192 = false
     end
-    if GetKeyState(123) then
+    if GetKeyState(KEY.F12) then
         if not KeyDown123 then
             KeyDown123 = true
             cheat = not(cheat)
