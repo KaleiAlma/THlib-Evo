@@ -982,8 +982,8 @@ function sc_name:init(b, name, score)
     end
     self.bound = false
     self.flag = 0
-    self._scale = 1
-    self._scale2 = 1
+    self.scale = 1
+    self.scale2 = 1
     self._alpha = 0
     self.talpha = 0
     self.talpha2 = 0
@@ -1059,10 +1059,10 @@ function sc_name:frame()
         end
         if self.timer > _t5 and self.timer < _t6 then
             self.talpha2 = min(self.talpha2 + (1 / t2), 1)
-            self._scale2 = max(1 - sin((90 / t2) * (self.timer - t3 + ct)), 0)
+            self.scale2 = max(1 - sin((90 / t2) * (self.timer - t3 + ct)), 0)
         end
         if self.timer < t3 then
-            self._scale = max(150 - 120 * sin((90 / t3) * self.timer), 30) / 30
+            self.scale = max(150 - 120 * sin((90 / t3) * self.timer), 30) / 30
         end
         self._alpha = min(self.timer / t3, 1)
     else
@@ -1074,7 +1074,7 @@ function sc_name:frame()
             self.xoffset = min(self.xoffset + 8 + self.xp, 220)
         end
         self.xoffset2 = self.xoffset
-        self._scale = 1
+        self.scale = 1
         self._alpha = 1
         if self.timer > 60 then
             RawDel(self)
@@ -1094,10 +1094,10 @@ function sc_name:render()
     SetImageState("boss_spell_name_bg", "",
             Color(alpha * 255 * self.talpha2, 255, 255, 255))
     x = self.x + self.xoffset2
-    Render("boss_spell_name_bg", x, y, 0, 1 + 0.5 * self._scale2)
+    Render("boss_spell_name_bg", x, y, 0, 1 + 0.5 * self.scale2)
     x = self.x + self.xoffset2 + self.xp
     y = y - 10
-    SetImageScale(s * self._scale)
+    SetImageScale(s * self.scale)
     local d = sqrt(2)
     local _x, _y
     for i = 0, 8 do
