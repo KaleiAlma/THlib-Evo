@@ -1,4 +1,6 @@
-#version 410 core
+#version 140
+#extension GL_ARB_separate_shader_objects : require
+#extension GL_ARB_explicit_attrib_location : require
 // --------------------------------------------------------------------------------
 // 遮罩功能
 // 根据灰度图生成 alpha 通道

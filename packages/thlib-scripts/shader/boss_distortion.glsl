@@ -1,4 +1,6 @@
-#version 410 core
+#version 140
+#extension GL_ARB_separate_shader_objects : require
+#extension GL_ARB_explicit_attrib_location : require
 // 引擎参数
 uniform sampler2D screen_texture;
 

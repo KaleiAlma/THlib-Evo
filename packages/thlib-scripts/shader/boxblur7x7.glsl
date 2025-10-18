@@ -1,4 +1,6 @@
-#version 410 core
+#version 140
+#extension GL_ARB_separate_shader_objects : require
+#extension GL_ARB_explicit_attrib_location : require
 // ----------------------------------------
 // 7x7 均值模糊 code by Xiliusha
 // 代码移植 by 璀境石
